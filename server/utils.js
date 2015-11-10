@@ -11,7 +11,7 @@ module.exports = {
       var bestTime = checkBestTime(hourly[i].temperature, hourly[i].icon, hourly[i].windSpeed);
       var date = moment(hourly[i].time*1000);
       var hourlyObj = {
-        time: date.format("hA"), 
+        time: date.format("ha"), 
         day: date.format("ddd"), 
         temp: hourly[i].temperature, 
         windSpeed: hourly[i].windSpeed,
