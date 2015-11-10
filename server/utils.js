@@ -1,7 +1,7 @@
 var moment = require('moment'); 
 
 module.exports = { 
-  forecastParser: function (rawJSON, cb){
+  forecastParser: function (rawJSON){
     var json = JSON.parse(rawJSON); 
     var hourly = json.hourly.data; 
     var resObj = {}; 
@@ -22,7 +22,7 @@ module.exports = {
       resObj.results.push(hourlyObj);
     };
 
-    cb(resObj); 
+    return resObj; 
   }
 };
 

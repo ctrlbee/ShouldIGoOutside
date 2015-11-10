@@ -9,9 +9,8 @@ module.exports = {
     request(url, function (error, response, json) {
       if (!error && response.statusCode == 200) {
         //parse json and pull out relevant fields 
-        utils.forecastParser(json, function(data){
-         cb(cb(data)); //refactor this madness to promises 
-        })
+        var parsed = utils.forecastParser(json);  
+        cb(parsed);
       }
     }); 
   }, 

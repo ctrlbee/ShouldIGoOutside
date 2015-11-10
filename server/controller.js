@@ -12,7 +12,8 @@ module.exports = function (app){
     var lat = req.query.lat || 37.828; 
     var lng = req.query.lng || -122.423; 
     model.getForecast(lat, lng, function (json){
-      res.send(json); 
+      //res.header("Content-Type", "application/json");
+      res.send(JSON.stringify(json)); 
     }); 
   });
 }
