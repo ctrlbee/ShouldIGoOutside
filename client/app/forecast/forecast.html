@@ -1,7 +1,9 @@
 <h1>forecast</h1>
 
-<div ng-controller="ForecastController" ng-init="getForecast()" id='container'>
+<div ng-controller="ForecastController" ng-init="updateForecast()" id='container'>
+  <a ng-click="updateForecast()">Update Forecast</a>
   <div> {{forecast}}</div>
+
 </div>
 
 

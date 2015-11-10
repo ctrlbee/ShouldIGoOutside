@@ -2,25 +2,34 @@ angular.module('gooutside.services', [])
 
 .factory('Forecast', function ($http, $location, $window){
 
-  var getForecast = function (){
-    return $http({
-      url: 'http://localhost:8000/api/forecast', 
+  var forecastObj = {}; 
+  var getForecast = function (zip){
+   return $http({
+      url: '/api/locations?zip='+zip+'', 
       method: 'GET'
     })
-    .then(function (resp) {
-      return resp.data;
+    .then(function (coords) {
+      return $http({
+        url: 'api/forecast?lat='+coords.data.lat+'&lng='+coords.data.lng+'', 
+        method: 'GET'
+      })
+        .then(function (fcst){
+          console.log("in fcst");
+          forecastObj = fcst;  
+          console.log(forecastObj);
+          return "done"; 
+        })
     });    
   };
 
-  return {
-    getForecast: getForecast
+  var getForecastObj = function (){
+    return forecastObj; 
   }
 
-})
-.factory('Locations', function ($http, $location, $window){
-
   return {
-
+    getForecast: getForecast,
+    forecastObj: forecastObj, 
+    getForecastObj: getForecastObj
   }
 
-})
+}); 
