@@ -13,8 +13,8 @@ module.exports = {
       var hourlyObj = {
         time: date.format("ha"), 
         day: date.format("ddd"), 
-        temp: hourly[i].temperature, 
-        windSpeed: hourly[i].windSpeed,
+        temp: Math.ceil(hourly[i].temperature), 
+        windSpeed: Math.ceil(hourly[i].windSpeed),
         summary: hourly[i].summary, 
         icon: hourly[i].icon, 
         bestTime: bestTime

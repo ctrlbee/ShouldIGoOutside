@@ -1,10 +1,41 @@
-<h1>forecast</h1>
+  <div ng-controller="ForecastController" ng-init="init()" class='container'>
+    
+    <!-- header -->
+    <div class='fcastHead'>
+      <h1> {{city}}</h1>
+      <p ng-click="backToLocations()">&lt&lt back to locations</p>
+      <h2>It'll be nicest around...</h2>
+    </div>
+    
+    <!-- best times  -->
+    <div class="bestTimes">
+      <div ng-repeat="fcast in forecast | filter:{bestTime: 'true'}" class="bestTimesCell">
+      <span>{{fcast.day}} at </span>{{fcast.time}}
+      </div>
+    </div>
 
-<div ng-controller="ForecastController" ng-init="updateForecast()" id='container'>
-  <a ng-click="updateForecast()">Update Forecast</a>
-  <div> {{forecast}}</div>
 
-</div>
+    <!-- weather forecast  -->
+    <div class="hourly">
+      <h2>Hourly Forecast</h2>
+      <div class="forecastRow">
+          <div class="day hourlyEl hourlyHeader">Day</div>
+          <div class="time hourlyEl hourlyHeader">Time</div>
+          <div class="temp hourlyEl hourlyHeader">Temp</div>
+          <div class="windSpeed hourlyEl hourlyHeader">Wind Speed</div>
+          <div class="summary hourlyEl hourlyHeader">Conditions</div>
+      </div>
+
+      <div ng-repeat="fcast in forecast" class="forecastRow">
+          <div class="day hourlyEl">{{fcast.day}}</div>
+          <div class="time hourlyEl">{{fcast.time}}</div>
+          <div class="temp hourlyEl">{{fcast.temp}}</div>
+          <div class="windSpeed hourlyEl">{{fcast.windSpeed}}</div>
+          <div class="summary hourlyEl">{{fcast.summary}}</div>
+      </div>
+    </div>
+
+  </div>
 
 
 <!--   <div ng-repeat="link in links track by $index" id='link'>

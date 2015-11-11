@@ -25,11 +25,12 @@ module.exports = {
         //parse response, get lat/long 
         var parsed = JSON.parse(json);
         if(parsed.status === 'ZERO_RESULTS'){
-          cb("bad zip", "bad zip"); 
+          cb("bad zip", "bad zip", "bad zip"); 
         } else {
           var lat = parsed.results[0].geometry.location.lat; 
-          var lng = parsed.results[0].geometry.location.lng; 
-          cb(lat, lng); 
+          var lng = parsed.results[0].geometry.location.lng;
+          var address = parsed.results[0].formatted_address;  
+          cb(lat, lng, address); 
         }
       }
     });

@@ -1,0 +1,106 @@
+body {
+  font-family: Helvetica, sans-serif
+}
+
+.title {
+  font-size: 5em; 
+}
+
+.container {
+  margin-right: auto; 
+  margin-left: auto; 
+  width: 80%; 
+  text-align: center;
+}
+
+/*input page style*/
+.inputBox {
+  height: 2em; 
+  font-size: 2em; 
+}
+
+
+/*forecast page style*/
+.fcastHead {
+  text-align: center;
+}
+
+.fcastHead h1 {
+  font-size: 4em; 
+}
+
+.fcastHead p {
+  color: grey;
+  margin-top: -3em; 
+  font-size: 0.8em; 
+}
+
+.bestTimes {
+  margin-right: auto; 
+  margin-left: auto; 
+  width: 80%; 
+  text-align: center;
+  margin-bottom: 1em; 
+  margin-top: -1em;
+}
+
+.bestTimesCell {
+  display: inline-block;
+  width: 15%;
+  font-size: 1.5em; 
+}
+
+.bestTimesCell span {
+  font-size: 0.8em; 
+  color: grey; 
+}
+
+.hourly {
+  margin-right: auto; 
+  margin-left: auto; 
+  margin-bottom: 2em; 
+  width: 80%; 
+  text-align: center;
+}
+
+
+.forecastRow{
+  margin-right: auto; 
+  margin-left: auto; 
+  width: 70%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.hourlyHeader {
+  color: grey;
+  font-size: 0.8em; 
+}
+
+.hourlyEl {
+  display: inline-block;
+  padding: 5px;
+}
+
+.day {
+  width: 10%;
+}
+.time {
+  width: 10%; 
+}
+.temp{
+  width: 10%; 
+}
+.windSpeed {
+  width: 10%; 
+}
+.summary {
+  width: 30%; 
+}
+
+
+
+
+
+
+
+

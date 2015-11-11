@@ -4,8 +4,8 @@ var model = require('./model.js');
 module.exports = function (app){
   app.get("/api/locations", function (req, res){
     var zip = req.query.zip || '94115';  
-    model.getLatLng(zip, function (lat, lng){
-      res.send(JSON.stringify({lat: lat, lng: lng})); 
+    model.getLatLng(zip, function (lat, lng, addy){
+      res.send(JSON.stringify({lat: lat, lng: lng, address: addy})); 
     })
   });
   app.get("/api/forecast", function (req, res){

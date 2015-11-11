@@ -1,8 +1,7 @@
-<h1>locations</h1>
-
-<div ng-controller="LocationsController" id='container'>
+<div ng-controller="LocationsController" class='container'>
+  <h1 class="title">When Should I Go Outside Today?</h1>
   <form ng-submit="getForecastByZip()">
-   <input type="text" ng-model="zipInput"/>  
-   <button>should I go outside?</button>
+   <input type="text" ng-model="zipInput" class="inputBox" value="Enter Zip"/>  
+   <button class="inputBox">Get the weather</button>
   </form>
 </div>
