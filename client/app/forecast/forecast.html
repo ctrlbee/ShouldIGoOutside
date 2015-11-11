@@ -9,6 +9,7 @@
     
     <!-- best times  -->
     <div class="bestTimes">
+      <div class="neverCell" ng-hide="hasBestTimes">Pretty Much Never.</div>
       <div ng-repeat="fcast in forecast | filter:{bestTime: 'true'}" class="bestTimesCell">
       <span>{{fcast.day}} at </span>{{fcast.time}}
       </div>

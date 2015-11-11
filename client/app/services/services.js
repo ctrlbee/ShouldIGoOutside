@@ -33,7 +33,20 @@ angular.module('gooutside.services', [])
     return city; 
   };
 
+  var hasBestTimes = function (){
+    console.log(forecastObj.data.results.length);
+    var ret = false; 
+    for (var i = 0; i < forecastObj.data.results.length; i++) {
+      console.log(forecastObj.data.results[i].bestTime);
+      if(forecastObj.data.results[i].bestTime){
+        return true; 
+      }
+    };
+    return ret; 
+  }
+
   return {
+    hasBestTimes: hasBestTimes, 
     getCity: getCity, 
     getForecast: getForecast,
     forecastObj: forecastObj, 
