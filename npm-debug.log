@@ -8,7 +8,7 @@
 7 verbose unsafe-perm in lifecycle true
 8 info ShouldIGoOutside@0.0.0 Failed to exec start script
 9 verbose stack Error: ShouldIGoOutside@0.0.0 start: `server/server.js`
-9 verbose stack Exit status 126
+9 verbose stack Exit status 2
 9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
 9 verbose stack     at emitTwo (events.js:87:13)
 9 verbose stack     at EventEmitter.emit (events.js:172:7)
@@ -25,7 +25,7 @@
 15 error npm  v2.14.7
 16 error code ELIFECYCLE
 17 error ShouldIGoOutside@0.0.0 start: `server/server.js`
-17 error Exit status 126
+17 error Exit status 2
 18 error Failed at the ShouldIGoOutside@0.0.0 start script 'server/server.js'.
 18 error This is most likely a problem with the ShouldIGoOutside package,
 18 error not with npm itself.
