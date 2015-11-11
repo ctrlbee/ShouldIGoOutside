@@ -4,8 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "gulp",
-    "lint": "jscs ./"
+    "start": "server/server.js"
+  },
+  "engines": {
+    "node": "4.2.1", 
+    "npm": "2.14.x"
   },
   "pre-commit": "lint",
   "license": "ISC",
